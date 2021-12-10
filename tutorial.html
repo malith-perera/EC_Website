@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>EC - Documentation</title>
+<link rel="shortcut icon" href="images/logo-ico.png" type="image/png">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<hr style="color:steelblue">
+<div>
+<div style="float:left;"><img src="images/logo.png" alt="logo" width="48" height="48" onclick="myFunction()"></div>
+<div style="float:right">
+<a href="index.html">Home</a> |
+<a href="documentation.html">Documentation</a> |
+<a href="tutorial.html">Tutorial</a> |
+<a href="download.html">Download</a> |
+<a href="about.html">About</a>
+</div>
+</div>
+<div style="clear:both"></div>
+<hr style="color:steelblue">
+
+<h1 style="text-align:center; ">Extended C Language Library<br>Tutorial</h1>
+
+<h4>Samples</h4>
+
+<h5>Sample 1</h5>
+
+<pre>
+<code>
+#include &lt;stdio.h&gt;
+
+int main ()
+{
+  printf ("Hello World!");
+  return 0;
+}
+</code>
+</pre>
+
+
+<h5>Sample 2</h5>
+
+<pre>
+<code>
+#include &lt;stdio.h&gt;
+
+#define EC_ARRAY int
+#include "ec.h"
+
+int main ()
+{
+
+  intArray array = EC_Array(int, 5);
+
+  array[0] = 30;
+  array[1] = 20;
+  array[2] = 10;
+  array[2] = 80;
+  array[2] = 40;
+
+  print_int (array);
+
+  sort_int (array);
+
+  print_int (array);
+
+  EC_Clean();
+
+  return 0;
+}
+
+</code>
+</pre>
+
+<hr style="color:steelblue">
+<p style="text-align:center; font-size: 12px">Copyright<sup>&copy;</sup> EC. All rights received.</p>
+<hr style="color:steelblue">
+</div>
+</body>
+</html>

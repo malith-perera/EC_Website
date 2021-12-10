@@ -1,0 +1,67 @@
+--------------------------------------------------------------------------------
+Version v1.1
+================================================================================
+
+Supported Features:
+-------------------
+EC Variable
+EC Array
+EC List
+EC Queue
+EC Stack
+
+How to do :
+-----------
+
+
+--------------------------------------------------------------------------------
+Version v1.1
+================================================================================
+
+Supported Features:
+-------------------
+Version v1.0 +
+Automatic memory management
+
+
+How to do :
+-----------
+
+Create Memory managing functions
+--------------------------------
+Memory clear
+Memory unlock
+Memory free
+Memory auto free
+
+Variable Memory_management
+Array Memory_management
+List Memory_management
+Queue Memory_management
+Stack Memory_management
+
+Refine all
+Test all
+
+
+--------------------------------------------------------------------------------
+Version v1.2
+================================================================================
+
+Version v1.1 +
+User flexible naming support
+
+
+============
+Version v1.3
+============
+
+Version v1.2 +
+
+How to programming with EC objects in mind
+
+
+EC Entiry Component System
+
+
+Compare performance

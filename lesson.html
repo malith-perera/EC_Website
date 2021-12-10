@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> BigPages |Write &amp; Practice </title>
+<meta charset="UTF-8">
+</head>
+
+
+<body onload="clearinput()">
+
+<p style="font-size:1em; font-weight:600;">C Program</p>
+<p style="font-family: 'Lucida Console', Monaco, monospace;">
+<span id="line1"></span>#include &lt;stdio.h&gt;<br/><br/> 
+<span id="line2"></span>&nbsp;&nbsp;int main() {<br/><br/> 
+<span id="line3"></span>&nbsp;&nbsp;printf("Hello World!");<br/><br/> 
+<span id="line4"></span>&nbsp;&nbsp;return 0;<br/><br/> 
+}<br/><br/>
+</p>
+
+<p style="font-size:1em; font-weight:600; font-style:italic;">Write &amp; Practice</p>
+<p id="codingline" style="font-family: 'Lucida Console', Monaco, monospace; ">&nbsp;</p>
+
+<div id="inputbox">
+<input id="code" type="text" onkeyup="checkline(this)" placeholder="write above code here..." style="font-family: 'Lucida Console', Monaco, monospace; border-radius:0px; width: 20em; height: 2em;"> <span id="right_sign"></span>
+</div>
+
+<br>
+
+<p id="codebox" style="border:1px solid #aaaaaa; padding: 4px; font-family: 'Lucida Console', Monaco, monospace;"></p>
+
+<script>
+var codelines = ['#include &ltstdio.h&gt', 'int main() {', 'printf( "Hello World!" );', 'return 0;', '}'];
+var reg_lines = ['^#include[ ]+[<]stdio.h[>][ ]*$', '^int main[(][ ]*[)][ ]*{[ ]*$', '^[ ]*printf[ ]*[(][ ]*"Hello World!"[ ]*[)][ ]*[;][ ]*$', '^[ ]*return 0;', '^[ ]*}[ ]*$'];
+ 
+var lineindex = 0;
+
+var writencode = "";
+
+var mark = '<img style="width:8px; height:8px;" src="mark.png">';
+
+var re = new RegExp(reg_lines[lineindex], "g");
+document.getElementById("codingline").innerHTML = codelines[lineindex];
+
+document.getElementById("line" + (lineindex + 1)).innerHTML = mark;
+
+
+if (!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+  };
+}
+
+function checkline(ele) {
+  var x = ele.value
+  x = x.trim();
+
+  var keypressed = event.which || event.keyCode;
+  console.log(keypressed);
+
+  if (keypressed != 16) {
+
+    if (keypressed == 13 ) {
+      if (codelines[lineindex + 1] == undefined) {
+        document.getElementById("codingline").innerHTML = "Complete! <img src='complete.png'>";
+	document.getElementById("inputbox").innerHTML = "";
+      }
+      else {
+        lineindex += 1;
+        re = new RegExp(reg_lines[lineindex], "g");
+        document.getElementById("codingline").innerHTML = codelines[lineindex];
+      }
+
+      x = x.replace( /</g, "&lt;");
+      x = x.replace( />/g, "&gt;");
+
+      document.getElementById("right_sign").innerHTML = "";
+      document.getElementById("code").value = "";
+
+      writencode = "";
+      for ( var i = 0; i < lineindex; i++ ) {
+        writencode += codelines[i] + "<br>";
+      }
+
+      document.getElementById("codebox").innerHTML = writencode + "<br/><br/><br/>";
+
+      document.getElementById("line" + (lineindex)).innerHTML = "";
+      document.getElementById("line" + (lineindex + 1)).innerHTML = mark;
+
+      return false;
+    }
+
+    if (re.test(x)) {
+      document.getElementById("right_sign").innerHTML = '<img src="right.jpg" style="width:20px; height:20px;"/>';
+
+    }
+    else {
+      document.getElementById("right_sign").innerHTML = '';
+    }
+  }
+
+}
+
+function clearinput() {
+  document.getElementById("code").value = "";
+}
+
+// console.log();
+
+</script>
+
+
+
+</body>
+</html> 
+

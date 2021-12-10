@@ -1,0 +1,250 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roadmap - SDL Wiki</title>
+<link rel="icon" type="image/ico" href="https://wiki.libsdl.org/static_files/favicon.ico">
+<link rel="alternate" type="application/atom+xml" title="recent changes" href="https://github.com/libsdl-org/sdlwiki/commits/main.atom">
+<link rel="stylesheet" href="Roadmap%20-%20SDL%20Wiki_files/ghwikipp.css">
+<meta name="color-scheme" content="dark light">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@sdl_commits">
+<meta name="twitter:image" content="https://wiki.libsdl.org/static_files/logo.png">
+<meta property="og:image" content="https://wiki.libsdl.org/static_files/logo.png">
+<meta name="twitter:url" content="https://wiki.libsdl.org">
+<meta property="og:url" content="https://wiki.libsdl.org">
+<meta name="twitter:title" content="Roadmap">
+<meta property="og:title" content="Roadmap">
+<meta name="twitter:description" content="The Simple Directmedia Layer Wiki">
+<meta property="og:description" content="The Simple Directmedia Layer Wiki">
+
+<link rel="stylesheet" href="Roadmap%20-%20SDL%20Wiki_files/pandoc.css">
+</head><body>
+
+<p></p><div class="alertBox"><font color="#ff0000"><center>
+This is new wiki software and old wiki content. It's a work in progress!<br>
+Here's the <a href="https://discourse.libsdl.org/t/wiki-libsdl-org-migration/31085">explanation</a>.
+<br>Be gentle,
+<a href="https://github.com/icculus/ghwikipp/issues/new">report bugs</a>,
+<a href="https://github.com/libsdl-org/sdlwiki/issues/new?title=Feedback%20on%20page%20Roadmap">leave feedback on pages</a>,
+or just <a href="https://wiki.libsdl.org/Roadmap/edit">edit</a> them yourself! Thanks!
+</center></font></div><p></p>
+
+<div class="wikitopbanner">
+<font size="+3">SDL Wiki</font>
+</div>
+
+
+<h1 id="sdl_2.0_roadmap">SDL 2.0 Roadmap</h1>
+<p>This is a list of features which are in progress for the SDL 2.0 
+release. The features are organized by subsystem and assigned to 
+developers. Features will move around as the design evolves.</p>
+<p>&lt;&lt;TableOfContents(2)&gt;&gt;</p>
+<h2 class="anchorText" id="video">Video<a href="#video"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h2>
+<h3 class="anchorText" id="complete">Complete<a href="#complete"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: green;">Sam: Add support for multiple windows</span></li>
+<li><span style="color: green;">Sam: Create 3D accelerated texture based rendering API</span></li>
+<li><span style="color: green;">Sam: Create API for enabling/disabling the screensaver</span></li>
+<li><span style="color: green;">Sam: Add support for selecting video mode refresh rate</span></li>
+<li><span style="color: green;">Sam: Create API for clipboard support (check out PyGame)</span></li>
+<li><span style="color: green;">Sam: Add support for multiple displays</span></li>
+<li><span style="color: green;">Sam: Add concept of viewport to fullscreen windows</span></li>
+<li><span style="color: green;">Sam: Add support for synchronizing 2D updates with vblank, using SDL_HINT_RENDER_VSYNC</span></li>
+<li><span style="color: green;">Mason Wheeler and Gabriel Jacobo: Add support for render targets</span></li>
+</ul>
+<h3 class="anchorText" id="required">Required<a href="#required"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li>Ryan: Implement landscape mode for iPhone port</li>
+<li>Sam: Add support for OpenGL context profiles</li>
+<li>Sam: Create flags for specifying foreign window event behavior</li>
+<li><span style="color: green;">Andreas: Support shaped windows</span></li>
+<li><span style="color: green;">Windows</span></li>
+<li>Mac OS X</li>
+<li><span style="color: green;">Linux</span></li>
+</ul>
+<h3 class="anchorText" id="wishlist">Wishlist<a href="#wishlist"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: gray;">Create desktop video mode change notification</span></li>
+<li><span style="color: gray;">Support always-on-top window styles</span></li>
+<li><span style="color: gray;">Support multiple icon sizes (e.g. for Windows Vista)</span></li>
+<li><span style="color: gray;">Implement NET_WM_PING and 
+NET_WM_PID/WM_CLIENT_MACHINE 
+(http://standards.freedesktop.org/wm-spec/wm-spec-1.3.html#KILLINGWINDOWS)</span></li>
+<li><span style="color: gray;">Support desktop windows</span></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>        setAttribute(<span class="ex">Qt::</span>WA_X11NetWmWindowTypeDesktop);</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>        setWindowFlags(<span class="ex">Qt::</span>SplashScreen);</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="ex">Qt::</span>WindowFlags flags = <span class="dv">0</span>;</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            flags |= <span class="ex">Qt::</span>FramelessWindowHint;</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            flags |= <span class="ex">Qt::</span>Tool;</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            flags |= <span class="ex">Qt::</span>WindowStaysOnBottomHint;</span></code></pre></div>
+<h2 class="anchorText" id="audio">Audio<a href="#audio"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h2>
+<h3 class="anchorText" id="complete_1">Complete<a href="#complete_1"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: green;">Ryan: Add support for float and 32-bit int audio formats</span></li>
+<li><span style="color: green;">Ryan: Add support for 7.1 speaker output</span></li>
+</ul>
+<h3 class="anchorText" id="required_1">Required<a href="#required_1"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: green;">Ryan: Create audio recording API</span></li>
+<li>Windows</li>
+<li>Mac OS X</li>
+<li>Linux</li>
+<li><span style="color: green;">Ryan: Add support for multiple audio devices</span></li>
+<li>Windows</li>
+<li>Mac OS X</li>
+<li>Linux</li>
+<li>Ryan: Add support for audio device live connect and disconnect</li>
+<li>Ryan: Add support for non-power-of-two audio rate conversion</li>
+</ul>
+<h3 class="anchorText" id="wishlist_1">Wishlist<a href="#wishlist_1"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: gray;">PCM volume control</span></li>
+</ul>
+<h2 class="anchorText" id="event">Event<a href="#event"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h2>
+<h3 class="anchorText" id="complete_2">Complete<a href="#complete_2"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: green;">Sam: Add a way to dynamically register for custom event types</span></li>
+<li><span style="color: green;">Add a timeout parameter for <a href="https://wiki.libsdl.org/SDL_WaitEvent" title="wikilink">SDL_WaitEvent</a>() (http://lists.libsdl.org/pipermail/sdl-libsdl.org/2008-May/thread.html#65067)</span></li>
+</ul>
+<h3 class="anchorText" id="required_2">Required<a href="#required_2"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li>Sam: Add modifier state to key and button events</li>
+<li>Sam: Resolve question of how to represent iOS events which need to be handled before dispatch returns</li>
+</ul>
+<h3 class="anchorText" id="wishlist_2">Wishlist<a href="#wishlist_2"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: gray;">Add a timestamp to events</span></li>
+</ul>
+<h2 class="anchorText" id="mouse_input">Mouse Input<a href="#mouse_input"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h2>
+<h3 class="anchorText" id="complete_3">Complete<a href="#complete_3"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: green;">Sam: Mousewheel has a separate event</span></li>
+<li><span style="color: green;">Sam: Support showing / hiding the cursor</span></li>
+<li><span style="color: green;">Sam: Add support color cursors</span></li>
+</ul>
+<h3 class="anchorText" id="required_3">Required<a href="#required_3"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li>Sam: Reimplement mouse grab support</li>
+<li>Verify cursor location is correct when ungrabbed</li>
+<li>Verify proper behavior with Vista DPI scaling</li>
+</ul>
+<h3 class="anchorText" id="wishlist_3">Wishlist<a href="#wishlist_3"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: gray;">Ryan: Add support for multiple mice</span></li>
+<li>Q: What is the mapping of individual mice to pointers? Is there a 
+"master pointer" that multiple mice share and then events for the 
+individual mice? Is there a dual mode, where you have a single pointer 
+that all mice affect, and you can switch to multiple pointers, each 
+affected by a single mouse?</li>
+<li><span style="color: gray;">Pressure/tilt support for tablet like devices</span></li>
+<li><span style="color: gray;">Add support animated cursors</span></li>
+</ul>
+<h2 class="anchorText" id="keyboard_input">Keyboard Input<a href="#keyboard_input"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h2>
+<h3 class="anchorText" id="complete_4">Complete<a href="#complete_4"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: green;">Sam: Create new text input event separate from key events</span></li>
+</ul>
+<h3 class="anchorText" id="required_4">Required<a href="#required_4"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li>Q: When you're enabling or disabling text events via keystroke, how 
+do you ignore the text generated by the key that is toggling text input?</li>
+</ul>
+<p><code>&nbsp;&nbsp;&nbsp;A:&nbsp;Key&nbsp;events&nbsp;are&nbsp;guaranteed&nbsp;to&nbsp;happen&nbsp;first</code></p>
+<ul>
+<li>Sam/Jiang/Daniel: Create IME API and support system IME interfaces</li>
+<li><span style="color: green;">Windows</span></li>
+<li><span style="color: green;">Mac OS X</span></li>
+<li>Linux</li>
+<li>Sam: Add name to keysym and name to scancode lookup functions</li>
+</ul>
+<h2 class="anchorText" id="joystick_input">Joystick Input<a href="#joystick_input"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h2>
+<h3 class="anchorText" id="complete_5">Complete<a href="#complete_5"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: green;">Edgar: Create Force Feedback API</span></li>
+</ul>
+<h3 class="anchorText" id="required_5">Required<a href="#required_5"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li>Ryan: Add support for joystick device live connect and disconnect</li>
+</ul>
+<h2 class="anchorText" id="multi_touch_input">Multi-touch Input<a href="#multi_touch_input"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h2>
+<h3 class="anchorText" id="complete_6">Complete<a href="#complete_6"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: green;">Jim: Create multi-touch input API</span></li>
+</ul>
+<h2 class="anchorText" id="multi_threading">Multi-threading<a href="#multi_threading"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h2>
+<h3 class="anchorText" id="complete_7">Complete<a href="#complete_7"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: green;">Sam: Create API for getting the number of CPUs</span></li>
+<li><span style="color: green;">Bob: Create API for atomic operations on data</span></li>
+<li><span style="color: green;">Sam: Remove unsafe SDL_KillThread() API</span></li>
+<li><span style="color: green;">Sam: Create API for thread priority</span></li>
+</ul>
+<h2 class="anchorText" id="timers">Timers<a href="#timers"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h2>
+<h3 class="anchorText" id="complete_8">Complete<a href="#complete_8"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: green;">Sam: Add higher precision timers for profiling</span></li>
+</ul>
+<h2 class="anchorText" id="general">General<a href="#general"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h2>
+<h3 class="anchorText" id="complete_9">Complete<a href="#complete_9"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: green;">Ryan: Create API for assertions</span></li>
+<li><span style="color: green;">Sam: Public license for SDL_compat.c, tests, and SDL_main*</span></li>
+<li><span style="color: green;">Sam: Figure out the best way to support simultaneous SDL 1.2 and SDL 2.0 installations</span></li>
+<li><span style="color: green;">Sheena: Finish 2.0 API documentation</span></li>
+</ul>
+<h3 class="anchorText" id="required_6">Required<a href="#required_6"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li>Sam: Write introductions for SDL 2.0 API documentation</li>
+</ul>
+<h3 class="anchorText" id="wishlist_4">Wishlist<a href="#wishlist_4"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<ul>
+<li><span style="color: gray;">Create an API for live video capture</span></li>
+<li><span style="color: gray;">Create an API for accelerometer data</span></li>
+<li><span style="color: gray;">Create extended set of (negative) error codes and have the API functions document and return them</span></li>
+</ul>
+<h3 class="anchorText" id="other_details">Other details<a href="#other_details"><img src="Roadmap%20-%20SDL%20Wiki_files/link.svg" class="anchorImage" alt="" width="16" height="16"></a></h3>
+<p>Ryan has more information on the SDL 2.0 changes that you can find here:<br>
+<a href="http://icculus.org/cgi-bin/finger/finger.pl?user=icculus&amp;date=2007-10-07&amp;section=sdl13">http://icculus.org/cgi-bin/finger/finger.pl?user=icculus&amp;date=2007-10-07&amp;section=sdl13</a></p>
+
+
+<hr>
+[
+<a href="https://wiki.libsdl.org/Roadmap/edit">edit</a>
+|
+<a href="https://wiki.libsdl.org/Roadmap/delete">delete</a>
+|
+<a href="https://wiki.libsdl.org/Roadmap/history">history</a>
+|
+<a href="https://github.com/libsdl-org/sdlwiki/issues/new?title=Feedback%20on%20page%20Roadmap">feedback</a>
+|
+<a href="https://wiki.libsdl.org/Roadmap/raw">raw</a>
+]
+
+
+<div class="wikibottombanner">
+<center>
+<p>
+[
+<a href="https://wiki.libsdl.org/">front page</a>
+|
+<a href="https://wiki.libsdl.org/wiki/index">index</a>
+|
+<a href="https://wiki.libsdl.org/wiki/search">search</a>
+|
+<a href="https://github.com/libsdl-org/sdlwiki/commits/main">recent changes</a>
+|
+<a href="https://github.com/libsdl-org/sdlwiki">git repo</a>
+|
+<a href="https://wiki.libsdl.org/static_files/offline/sdlwiki.zip">offline html</a>
+]
+</p>
+<p>All wiki content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>.<br>
+Wiki powered by <a href="https://github.com/icculus/ghwikipp">ghwikipp</a>.</p>
+</center></div>
+
+
+
+
+</body></html>

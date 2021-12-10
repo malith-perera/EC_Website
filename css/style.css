@@ -1,0 +1,55 @@
+.container {
+width: 75%;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+body {
+  color: steelblue;
+  background-color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  /*color: #333;*/
+  font-weight: 300;
+}
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+a:link, a:visited {
+  background-color: steelblue;
+  color: white;
+  padding: 8px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+a:hover, a:active {
+  background-color: lightsteelblue;
+  color: steelblue;
+}
+
+.button {
+  background-color: steelblue;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
