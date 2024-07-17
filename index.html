@@ -5,75 +5,143 @@
 <link rel="shortcut icon" href="images/logo-ico.png" type="image/png">
 <link href="css/style.css" rel="stylesheet">
 <script src="js/script.js"></script>
+
+<script>
+
+</script>
+
 </head>
 <body>
-<div class="container">
-<hr style="color:steelblue">
-<div>
-<div style="float:left;"><img src="images/logo.png" alt="logo" width="48" height="48" onclick="myFunction()"></div>
-<div style="float:right">
-<a href="index.html">Home</a> |
-<a href="documentation.html">Documentation</a> |
-<a href="tutorial.html">Tutorial</a> |
-<a href="download.html">Download</a> |
-<a href="about.html">About</a>
+
+<div style="border:1px solid; border-radius: 0px 0px 10px 10px; border-color:steelblue; display:grid; grid-template-columns: 20% 20% 60%; padding: 8px;" class="boxshadow"> 
+
+    <div><img src="images/logo.png" alt="logo" width="40" height="40" onclick="myFunction()"> v1.0 </div>
+
+    <div style="text-align:left;">
+        <img src="images/extendedc.png" alt="logo" onclick="">
+    </div>
+
+    <div style="text-align:right">
+        <a href="index.html">Home</a> |
+        <a href="documentation.html">Documentation</a> |
+        <a href="tutorial.html">Tutorial</a> |
+        <a href="download.html">Download</a> |
+        <a href="about.html">About</a>
+    </div>
 </div>
+
+
+<div style="padding:0; margin:auto; width: 96%;"> <!-- overall down div -->
+<div style="font-size:18pt; text-align: center; margin: 20px;">The Extended C library and the tool kit make C programming easier than ever
 </div>
-<div style="clear:both"></div>
-<hr style="color:steelblue">
 
-<h1 style="text-align:center;">Extended C Language<br>Library</h1>
+<hr style="color:steelblue;">
 
-<!-- what is Extended C-->
-<p> 
-C is one of the greatest programming language ever made and still widely in use.
-<cite>Extended C </cite> is a library and a tool kit for write C programes using easy to use variables, arrays, lists, queues and stacks. It also can automate your memory management within your code if you are interested in. Though C is a structured programming language <cite>Extended C</cite> allows you to develop programs with <em>objects in mind</em>.
-</p>
+<div style="height:16px">&nbsp;</div>
 
-<!-- my hope
-<p>
-Extende C is a highly populer with students, new commers and non IT stuff like scientists and engineers who need quick results in a simple way. Not only them Extended C is also touch by C gients and veterance who play massive rools in the field.
-</p>
--->
+<!-- begin row 2 -->
+<div style="display:grid; grid-template-columns: 50% 50%; margin:5px;">
 
-<!-- What can you do with extended C-->
-<p>
-Using <cite>Extended C</cite> you can develop any type of applications fast and easily than ever. Spectially the performance critical applications in a shoot. Furthermore if you like to follow the EC coding guidelines not even you can write high speed applications it also allows you to decrease your development time dramatically because of it’s clear structured nature allows you to develop more complex programs in simple way with <em>objects in mind</em>. You can achieve this goals more easily using <cite>extended C</cite> with your C program.
-</p>
+<div style="border:1px solid; border-radius: 5px 5px 0px 0px; border-color:steelblue;"> <!-- first grid -->
+<div style="background-color:steelblue; border-radius: 4px 4px 0px 0px; border-color:steelblue; text-align:center;">
+<h2 style="color: white; border:4px; padding:4px; margin:auto;" id="code_title">Hello World!</h2>
+</div>
+<div id="codes" style="width:100%; height:280px; overflow:scroll">
+    <pre>
+    <code>
+    #include "ec.h" 
 
+    int
+    main()
+    {
+        printf("Hello World\n");
+        return 0;
+    }
+    </code>
+    </pre>
+</div>
 
-<!-- What do you have to know to use extended C-->
-<p>If you know C basics it won't take much time you to grab the essence of EC. Because EC is just C, there is nothing you have to follow syntax rules other than C.</p> 
+<div style="background-color:steelblue; color:white; padding:4px; border-radious: 0px 0px 10px 10px; font-size:12px;">Output </div>
 
+<div style="background-color:black; color:white; padding:4px;  overflow:scroll; height:60px;">
+<pre id="output">
+  Hello World!
+</pre>
+</div>
 
-<!-- What do you have to do to use extended C-->
-<p>
- What you have to do is just download and install tool kit and include Extended C within your existing C program.
-</p>
+</div> <!-- end first grid -->
 
-<!-- Ending -->
-<p>
-At last we hope you will find EC as a more powerful and easy to use tool for you.
-</p>
+<div style="padding-left: 30px; text-align:center;"> <!-- Second grid -->
+    <div style="text-align:left;">
+    <h2 style="font-size:16pt;">Syntax Overview</h2>
+    <p style="font-size:14pt;">Don't afraid. It's C.</p>
+    <div id="helloworld" onclick="change_code(this.id)"><ul class="boxshadow" style="cursor:pointer">&lt;&lt; Hello World!</ul></div>
+    <div id="arrays" onclick="change_code(this.id)"><ul  style="cursor:pointer">Arrays</ul></div>
+    <div id="lists" onclick="change_code(this.id)"><ul  style="cursor:pointer">Lists</ul></div>
+    </div>
+</div> <!-- end second grid -->
+</div> <!-- end row 1 -->
 
-<!-- Thanking -->
-<p>
-Thank you for using Extended C Library and tool kit.
-</p>
+<br>
 
-<!-- Wish -->
-<p>
-Happy Coding !
-</p>
+<div style="display:grid; grid-template-columns: 50% 50%; margin:5px;"> <!-- grid begin -->
+    <div>
+        <h2>Rocket Speed</h2>
+        <p style="font-size: 16pt">Now it is not impossible to build a rapid applicalication with C in rocket speed. Say Hello to the world just in seconds. Customizable code promise you high performance guranteed. It's pure C. It's a Rocket.</p>
+    </div>
+    <div style="text-align:center"><img src="images/rocket.jpg" alt="rocket" onclick=""></div>
+</div> <!-- grid end -->
 
+<br>
 
-<h2 style="text-align:center;">Getting Started</h2>
+<div style="display:grid; grid-template-columns: 50% 50%; margin:5px;"> <!-- grid begin -->
+    <div style="text-align:center"><img src="images/rocket.jpg" alt="rocket" onclick=""></div>
+    <div>
+        <h2>Extended C Library</h2>
+        <p style="font-size: 16pt">Extended C provide you advanced functions and macros that raise you up to the next level. EC libray help you to build your application with building blocks.</p>
+    </div>
+</div> <!-- grid end -->
 
+<br>
+
+<div style="display:grid; grid-template-columns: 50% 50%; margin:5px;"> <!-- grid begin -->
+    <div>
+        <h2>EC Tool Kit</h2>
+        <p style="font-size: 16pt">EC has a friendly command line intrarctive tool kit that allows you to achive the tip of the mountain of codes.</p>
+    </div>
+    <div style="text-align:center"><img src="images/mountain.jpg" alt="rocket" onclick=""></div>
+</div> <!-- grid end -->
+
+<br>
+
+<div style="display:grid; grid-template-columns: 50% 50%; margin:5px;"> <!-- grid begin -->
+    <div style="text-align:center"><img src="images/workspace.png" alt="rocket" onclick=""></div>
+    <div>
+        <h2>EC Workspace</h2>
+        <p style="font-size: 16pt">EC provide you a extended work space to build your applications in a collabarative environment. Build your application with your colligues with peace and joy!</p>
+    </div>
+</div> <!-- grid end -->
+
+<br>
+
+<div style="display:grid; grid-template-columns: 50% 50%; margin:5px;"> <!-- grid begin -->
+    <div>
+        <h2>EC Documentation</h2>
+        <p style="font-size: 16pt">Step by step guides, manuels, tutorials, examples, library references, books, news tellers and informative videos will get you on to the board.</p>
+    </div>
+    <div style="text-align:center"><img src="images/documents.jpg" alt="documents" onclick=""></div>
+</div> <!-- grid end -->
+
+<br>
+
+<div style="border:1px solid; border-radius: 16px 16px 0px 0px; border-color:steelblue; background-color:steelblue; color:white"> <!-- first grid -->
+
+<h2 style="text-align:center;">Get Started</h2>
+<hr style="color:white; height:1px;">
 <p style="text-align:center;">Beginner | C programmer | EC programmer</p>
-
-<hr style="color:steelblue">
-<p style="text-align:center; font-size: 12px">Copyright<sup>&copy;</sup> EC. All rights received.</p>
-<hr style="color:steelblue">
 </div>
+
+<p style="text-align:center; font-size: 12px">Copyright<sup>&copy;</sup> EC. All rights received.</p>
+</div> <!-- overall -->
 </body>
 </html>

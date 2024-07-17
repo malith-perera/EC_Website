@@ -1,0 +1,41 @@
+Fruit *fruit1 = FruitNew();
+
+fruit1 = (Fruit) {"mango", "Green", 5};
+
+FruitList *fruit_list = FruitList();
+
+FruitAppend(fruit_list, fruit1);
+
+Fruit *fruit;
+for_list(fruit_list, fruit) {
+    printf("%s %s price %d\n",
+    	fruit->color, fruit->name, fruit->prict):
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+  #include <stdio.h>
+  
+  int
+  main()
+  {
+  	Str names = {"Malith", "Perera"};
+  	return 0;
+  }
+  
+  
+  
+  
+  
+  
+    #include <stdio.h>
+  
+  int
+  main()
+  {
+  	Str names = {"Malith", "Perera"};
+  	return 0;
+  }
